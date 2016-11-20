@@ -15,7 +15,6 @@ executable          library
                     View.Duvidas
                     View.Home
                     View.Institucional
-                    View.FaleConosco
                     View.AdicionaLivro
                     
   ghc-options:      -Wall -fwarn-tabs -O2

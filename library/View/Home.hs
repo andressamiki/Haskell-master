@@ -49,7 +49,7 @@ getHomeR = defaultLayout $ do
                     <a href=@{DuvR}>Dúvidas Frequentes
                 
                 <li>
-                    <a href=@{FaleR}>Fale conosco
+                    <a href=@{ContR}>Fale conosco
                 
             
             <ul class="nav navbar-nav navbar-right">

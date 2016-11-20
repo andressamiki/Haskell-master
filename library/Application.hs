@@ -13,7 +13,6 @@ import Handler.Categorias
 import View.Home
 import View.Institucional
 import View.Duvidas
-import View.FaleConosco
 import View.AdicionaLivro
 ------------------
 mkYesodDispatch "App" resourcesApp

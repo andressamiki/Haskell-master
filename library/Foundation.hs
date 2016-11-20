@@ -20,17 +20,17 @@ Usuario
     senha Text
     
 Livro
-    nome  Text
-    autor    Text
-    exemplar Int
-    assunto Text
+    nome      Text
+    autor     Text
+    exemplar  Int
+    assunto   Text
     categoria Int
-    deriving Show
+    deriving  Show
 
 Contatos
     nome  Text
     email Text
-    msg Text
+    msg   Text
     deriving Show
     
 Categorias
@@ -49,7 +49,7 @@ instance Yesod App where
     isAuthorized HomeR _ = return Authorized
     isAuthorized InstR _ = return Authorized
     isAuthorized DuvR _ = return Authorized
-    isAuthorized FaleR _ = return Authorized
+    isAuthorized ContR _ = return Authorized
     
     isAuthorized _ _ = estaAutenticado
 
