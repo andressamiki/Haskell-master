@@ -1,0 +1,37 @@
+      /* HEADER */
+
+	#header {
+	  padding-top: 1em;
+	  padding-bottom: 1em;
+	}
+
+	#header .form-inline {
+	  margin-top: 2em;
+	}
+
+	#header .form-inline label {
+	  width: 100%;
+	}
+
+	.navbar {
+	  border-radius: 0;
+	}
+
+	main#content {
+	  margin-bottom: 2em;
+	}
+   	
+   	.well {
+   		border-radius: 0;
+   		background-color: #eee;
+   	}
+   	
+   	section.destaque{
+   		background-color: #111;
+   		color: #A9A9A9;
+   	}
+   
+   	hr{
+   	height: 1px;
+	background-color: #555;
+   	}

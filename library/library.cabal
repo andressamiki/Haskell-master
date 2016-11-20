@@ -1,0 +1,32 @@
+name:               library
+version:            0.0.0
+cabal-version:      >= 1.8
+build-type:         Simple
+extra-source-files: routes
+
+executable          library
+  main-is:          Main.hs
+  other-modules:    Foundation
+                    Application
+                    Handler.Contatos
+                    Handler.Categorias
+                    Handler.Usuario
+                    Handler.Livro
+                    View.Duvidas
+                    View.Home
+                    View.Institucional
+                    View.FaleConosco
+                    View.AdicionaLivro
+                    
+  ghc-options:      -Wall -fwarn-tabs -O2
+
+  build-depends:  base
+                , yesod
+                , yesod-core
+                , text
+                , yesod-static
+                , persistent                    
+                , persistent-postgresql
+                , monad-logger
+
+  ghc-options:    -threaded -O2 -rtsopts -with-rtsopts=-N

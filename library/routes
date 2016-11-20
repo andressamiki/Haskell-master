@@ -1,0 +1,8 @@
+/                          HomeR     GET
+/duvidas                   DuvR      GET
+/faleconosco               FaleR     GET 
+/institucional             InstR     GET
+/usuario/login             LoginR    GET POST
+/usuario/adicionalivro     AdicLivR  GET 
+/static                    StaticR   Static getStatic
+/logout                    LogoutR   POST
