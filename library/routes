@@ -6,3 +6,4 @@
 /usuario/adicionalivro     AdicLivR  GET 
 /static                    StaticR   Static getStatic
 /logout                    LogoutR   POST
+/contatos/listar           ListContR GET

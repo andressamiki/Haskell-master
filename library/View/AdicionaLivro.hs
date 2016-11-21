@@ -46,7 +46,7 @@ getAdicLivR = defaultLayout $ do
                     <a href="mostralivro">Livros cadastrados
                 
                 <li>
-                    <a href="mostracontatos">SAC
+                    <a href=@{ListContR}>SAC
                 
             
             <ul class="nav navbar-nav navbar-right">

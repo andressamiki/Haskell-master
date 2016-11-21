@@ -6,6 +6,7 @@ import Foundation
 import Yesod
 import Data.Text
 import Control.Applicative
+import Database.Persist.Postgresql
 
 
 getHomeR:: Handler Html
