@@ -235,10 +235,13 @@ getListContR = do
             <hr>
             <br>
             $forall Entity uid contato <- contatos
-                <dl class='dl-horizontal well well-sm'>
-                    <dt>Nome:</dt><td> #{contatosNome  contato}
-                    <dt>Email:</dt><dd> #{contatosEmail  contato}
-                    <dt>Mensagem:</dt><dd> #{contatosMsg  contato}
+                <form action=@{DelContR uid} method=post>
+                    <dl class='dl-horizontal well well-sm'>
+                        <dt>Nome:</dt><td> #{contatosNome  contato}
+                        <dt>Email:</dt><dd> #{contatosEmail  contato}
+                        <dt>Mensagem:</dt><dd> #{contatosMsg  contato}
+                        <br>
+                        <input type="submit" value="Apagar Contato" style="background-color:red; color:white;">
                 
             
                        
@@ -265,3 +268,9 @@ getListContR = do
         <h6 class="text-center">
             ©2015 Copyright Andressa - Todos os direitos reservados.
         |]
+        
+        
+postDelContR :: ContatosId -> Handler Html
+postDelContR uid = do 
+                runDB $ delete uid
+                redirect ListContR

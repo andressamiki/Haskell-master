@@ -1,9 +1,10 @@
-/                          HomeR     GET
-/duvidas                   DuvR      GET
-/faleconosco               ContR     GET POST
-/institucional             InstR     GET
-/login                     LoginR    GET POST
-/usuario/adicionalivro     AdicLivR  GET 
-/static                    StaticR   Static getStatic
-/logout                    LogoutR   POST
-/contatos/listar           ListContR GET
+/                                HomeR       GET
+/duvidas                         DuvR        GET
+/faleconosco                     ContR       GET POST
+/institucional                   InstR       GET
+/login                           LoginR      GET POST
+/usuario/adicionalivro           AdicLivR    GET 
+/static                          StaticR     Static getStatic
+/logout                          LogoutR     POST
+/contatos/listar                 ListContR   GET
+/contatos/deletar/#ContatosId     DelContR    POST
