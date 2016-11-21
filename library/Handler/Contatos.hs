@@ -16,6 +16,7 @@ getContR:: Handler Html
 getContR = do
     (widget,enctype)<- generateFormPost formCont
     defaultLayout $ do
+    sess <- lookupSession "_ID"
     setTitle "Fale Conosco / Biblioteca do Saber"
     
     toWidgetHead[hamlet|
@@ -58,8 +59,13 @@ getContR = do
                 
             
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="login">Área exclusiva
+                $maybe _ <- sess
+                    <li> 
+                        <form action=@{LogoutR} method=post>
+                            <input type="submit" value="Logout">
+                $nothing
+                    <li>
+                        <a href=@{LoginR}>Área Exclusiva
                     
     <main id="content">
         <div class="container">
@@ -109,7 +115,8 @@ postContR = do
         FormSuccess cont -> do
             uid <- runDB $ insert cont
             defaultLayout $ do
-            
+                
+                sess <- lookupSession "_ID"
                 setTitle "Contatos Sucesso / Biblioteca do Saber"
                 
                 toWidgetHead[hamlet|
@@ -149,6 +156,14 @@ postContR = do
                                 
                                 <li>
                                     <a href=@{ContR}>Fale conosco
+                                    
+                            <ul class="nav navbar-nav navbar-right">
+                                $maybe _ <- sess
+                                    <li> 
+                                        <form action=@{LogoutR} method=post>
+                                            <input type="submit" value="Logout">
+                                $nothing
+                                    <li> <a href=@{LoginR}>Área Exclusiva
                                 
                     <main id="content" class="container">
                         

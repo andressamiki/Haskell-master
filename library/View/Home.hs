@@ -55,11 +55,14 @@ getHomeR = defaultLayout $ do
             
             <ul class="nav navbar-nav navbar-right">
                 $maybe _ <- sess
-                    <li> 
+                    <li>
                         <form action=@{LogoutR} method=post>
                             <input type="submit" value="Logout">
                 $nothing
-                    <li> <a href=@{LoginR}>Área Exclusiva
+                    <li>
+                        <a href=@{LoginR}>Área Exclusiva
+                    
+            
     
     <main id="content" class="container">
         <section id="carousel-example-generic" class="carousel slide" data-ride="carousel">
