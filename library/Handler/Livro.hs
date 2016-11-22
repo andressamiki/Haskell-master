@@ -7,13 +7,21 @@ module Handler.Livro where
 import Foundation
 import Yesod
 import Yesod.Static
+import Control.Monad.Logger (runStdoutLoggingT)
+import Control.Applicative
+import Data.Text
+import Database.Persist.Postgresql
 
 formLivro :: Form Livro
 formLivro = renderDivs $ Livro
     <$> areq textField  "Nome: "       Nothing
     <*> areq textField  "Autor: "      Nothing
     <*> areq textField  "Assunto: "    Nothing
-    <*> areq textField  "Categoria: "  Nothing
+    <*> areq (selectField cats)  "Categoria: "  Nothing
+    
+cats = do
+       entidades <- runDB $ selectList [] [Asc CategoriasNome] 
+       optionsPairs $ fmap (\ent -> (categoriasNome $ entityVal ent, entityKey ent)) entidades
 
 getLivR :: Handler Html
 getLivR = do

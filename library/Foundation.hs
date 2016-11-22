@@ -23,7 +23,7 @@ Livro
     nome      Text
     autor     Text
     assunto   Text
-    categoria Text
+    categoria CategoriasId
     deriving  Show
 
 Contatos
