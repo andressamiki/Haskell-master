@@ -199,3 +199,12 @@ postLivR = do
                             ©2015 Copyright Andressa - Todos os direitos reservados.
                 |]
         _ -> redirect LivR
+        
+getListLivR :: Handler Html
+getListLivR = do
+             listaL <- runDB $ selectList [] [Asc LivroNome]
+             defaultLayout $ [whamlet|
+                 <h1> Livros cadastrados:
+                 $forall Entity lid liv <- listaL
+                     #{livroNome liv} 
+             |]
