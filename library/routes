@@ -9,4 +9,5 @@
 /usuario/listar                  ListUserR   GET
 /contatos/deletar/#ContatosId    DelContR    POST
 /usuario/adicionarlivro          LivR        GET POST
+/adicionarcategoria              CatR        GET POST
 
