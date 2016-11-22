@@ -206,10 +206,22 @@ getListLivR = do
             defaultLayout $ [whamlet|
                 <h1> Livros cadastrados:
                 $forall Entity lid liv <- listaL
-                    #{livroNome liv} 
+                    <a href=@{LivroR lid}> #{livroNome liv} 
                     <form method=post action=@{LivroR lid}> 
                         <input type="submit" value="Deletar"><br>
             |]
+
+getLivroR :: LivroId -> Handler Html
+getLivroR lid = do
+             livro <- runDB $ get404 lid 
+             cat <- runDB $ get404 (livroCatid livro)
+             defaultLayout [whamlet| 
+                 <h1>Livro: #{livroNome livro}
+                 <p> Autor: #{livroAutor livro}
+                 <p> Assunto: #{livroAssunto livro}
+                 <p> Categoria: #{categoriasNome cat}
+             |]
+
              
 postLivroR :: LivroId -> Handler Html
 postLivroR lid = do

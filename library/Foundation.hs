@@ -8,7 +8,7 @@ import Yesod
 import Data.Text
 import Yesod.Static
 import Database.Persist.Postgresql
-    ( ConnectionPool, SqlBackend, runSqlPool)
+    ( ConnectionPool, SqlBackend, runSqlPool, runMigration)
     
 staticFiles "static"
 
@@ -23,7 +23,7 @@ Livro
     nome      Text
     autor     Text
     assunto   Text
-    categoria CategoriasId
+    catid     CategoriasId
     deriving  Show
 
 Contatos

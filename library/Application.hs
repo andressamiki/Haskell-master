@@ -14,6 +14,7 @@ import View.Home
 import View.Institucional
 import View.Duvidas
 
+import Database.Persist.Postgresql
 ------------------
 mkYesodDispatch "App" resourcesApp
 
