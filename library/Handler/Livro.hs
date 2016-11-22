@@ -202,9 +202,16 @@ postLivR = do
         
 getListLivR :: Handler Html
 getListLivR = do
-             listaL <- runDB $ selectList [] [Asc LivroNome]
-             defaultLayout $ [whamlet|
-                 <h1> Livros cadastrados:
-                 $forall Entity lid liv <- listaL
-                     #{livroNome liv} 
-             |]
+            listaL <- runDB $ selectList [] [Asc LivroNome]
+            defaultLayout $ [whamlet|
+                <h1> Livros cadastrados:
+                $forall Entity lid liv <- listaL
+                    #{livroNome liv} 
+                    <form method=post action=@{LivroR lid}> 
+                        <input type="submit" value="Deletar"><br>
+            |]
+             
+postLivroR :: LivroId -> Handler Html
+postLivroR lid = do
+     runDB $ delete lid
+     redirect ListLivR

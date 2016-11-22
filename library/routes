@@ -11,3 +11,4 @@
 /usuario/adicionarlivro          LivR        GET POST
 /adicionarcategoria              CatR        GET POST
 /livro/listar                    ListLivR    GET
+/livro/listar/#LivroId           LivroR      POST
