@@ -22,9 +22,8 @@ Usuario
 Livro
     nome      Text
     autor     Text
-    exemplar  Int
     assunto   Text
-    categoria Int
+    categoria Text
     deriving  Show
 
 Contatos

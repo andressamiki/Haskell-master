@@ -229,9 +229,12 @@ getListContR = do
                 
                 <li>
                     <a href="mostralivro">Livros cadastrados
+                    
+                <li>
+                    <a href=@{ListUserR}>Lista de Admin´s
                 
                 <li>
-                    <a href="mostracontatos">SAC
+                    <a href=@{ListContR}>SAC
                 
             
             <ul class="nav navbar-nav navbar-right">
