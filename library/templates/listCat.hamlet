@@ -6,15 +6,13 @@
                   
             <hr>
             <br>
-            $forall Entity lid liv <- listaL
-                <form method=post action=@{LivroR lid}>
+            $forall Entity cid cat <- listaL
+                <form method=post action=@{DelCatR cid}>
                     
                         <dl class='dl-horizontal well well-sm'>
-                            <dt>Nome:</dt><td>
-                                <a href=@{LivroR lid}>
-                                    #{livroNome liv}
+                            <dt>Nome:</dt><td>  #{categoriasNome cat}
                             <br>
-                            <input type="submit" value="Apagar Contato" style="background-color:red; color:white;">
+                            <input type="submit" value="Apagar Categoria" style="background-color:red; color:white;">
                             
                         
                 

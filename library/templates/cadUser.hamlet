@@ -1,0 +1,16 @@
+    <main id="content">
+        <div class="container">
+            <header>
+                <h2 class="text-center">
+                    Cadastro de Usuarios
+                
+            
+            <hr>
+            <br>
+            <div class="well">
+                <form method=post action=@{CadUserR} enctype=#{enctype}>
+                    ^{widget}
+                    <input type="submit" value="Cadastrar">
+                     
+                            
+    

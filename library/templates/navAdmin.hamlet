@@ -13,14 +13,21 @@
                     
                 <li>
                     <a href=@{CatR}>Adicionar Categoria
+                    
+                <li>
+                    <a href=@{ListCatR}>Listar Categorias
                 
                 <li>
                     <a href=@{ListLivR}>Livros cadastrados
                 
                 <li>
-                    <a href=@{ListUserR}>Lista de Admin´s
+                    <a href=@{CadUserR}>Cadastrar Admin
+                
                 <li>
-                    <a href=@{ListContR}>SAC
+                    <a href=@{ListUserR}>Lista de Admin´s
+                
+                <li>
+                    <a href=@{ListContR}>Lista de Contatos
             
             <ul class="nav navbar-nav navbar-right">
                 $maybe _ <- sess

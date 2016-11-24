@@ -83,3 +83,58 @@ postLogoutR = do
     deleteSession "_ID"
     redirect HomeR
     
+    
+getCadUserR :: Handler Html
+getCadUserR = do
+    (widget,enctype)<- generateFormPost formUser
+    defaultLayout $ do
+    sess <- lookupSession "_ID"
+    setTitle "Cadastrar Usuarios / Biblioteca do Saber"
+    
+    toWidgetHead[hamlet|
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    |]
+    -- Adiciona o bootstrap via CDN
+    addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    
+    -- Adiciona o jquery via CDN
+    addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+    -- Adiciona o js via CDN
+    addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    
+    addStylesheet $ StaticR css_principal_css
+    $(whamletFile "templates/navAdmin.hamlet")
+    $(whamletFile "templates/cadUser.hamlet")
+    $(whamletFile "templates/footer.hamlet")
+    
+postCadUserR :: Handler Html
+postCadUserR = do
+    ((resultado,_),_)<- runFormPost formUser
+    case resultado of
+        FormSuccess user -> do
+            uid <- runDB $ insert user
+            defaultLayout $ do
+                
+                sess <- lookupSession "_ID"
+                setTitle "Sucesso Usuario / Biblioteca do Saber"
+                
+                toWidgetHead[hamlet|
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                |]
+                -- Adiciona o bootstrap via CDN
+                addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                
+                -- Adiciona o jquery via CDN
+                addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+                -- Adiciona o js via CDN
+                addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                
+                addStylesheet $ StaticR css_principal_css
+                $(whamletFile "templates/navAdmin.hamlet")
+                $(whamletFile "templates/sucesUser.hamlet")
+                $(whamletFile "templates/footer.hamlet")
+                    
+        _ -> redirect LivR
+        

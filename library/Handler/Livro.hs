@@ -80,7 +80,7 @@ getListLivR = do
             listaL <- runDB $ selectList [] [Asc LivroNome]
             defaultLayout $ do
                 sess <- lookupSession "_ID"
-                setTitle "Lvros Cadastrados / Biblioteca do Saber"
+                setTitle "Livros Cadastrados / Biblioteca do Saber"
                 
                 toWidgetHead[hamlet|
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -101,14 +101,29 @@ getListLivR = do
 
 getLivroR :: LivroId -> Handler Html
 getLivroR lid = do
-             livro <- runDB $ get404 lid 
-             cat <- runDB $ get404 (livroCatid livro)
-             defaultLayout [whamlet| 
-                 <h1>Livro: #{livroNome livro}
-                 <p> Autor: #{livroAutor livro}
-                 <p> Assunto: #{livroAssunto livro}
-                 <p> Categoria: #{categoriasNome cat}
-             |]
+            livro <- runDB $ get404 lid 
+            cat <- runDB $ get404 (livroCatid livro)
+            defaultLayout  $ do
+                sess <- lookupSession "_ID"
+                setTitle "Livro / Biblioteca do Saber"
+                
+                toWidgetHead[hamlet|
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                |]
+                -- Adiciona o bootstrap via CDN
+                addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                
+                -- Adiciona o jquery via CDN
+                addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+                -- Adiciona o js via CDN
+                addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                addStylesheet $ StaticR css_principal_css
+                $(whamletFile "templates/navAdmin.hamlet")
+                $(whamletFile "templates/perfilLivro.hamlet")
+                $(whamletFile "templates/footer.hamlet")
+                
+             
 
              
 postLivroR :: LivroId -> Handler Html

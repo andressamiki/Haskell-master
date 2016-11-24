@@ -1,0 +1,16 @@
+        <main id="content">
+            <div class="container">
+                
+                <hr>
+                <br>
+                <div class="well">
+                    <h3>
+                        Livro: #{livroNome livro}
+                    <p>
+                        Autor: #{livroAutor livro}
+                    <p> 
+                        Assunto: #{livroAssunto livro}
+                    <p> 
+                        Categoria: #{categoriasNome cat}
+                         
+        
