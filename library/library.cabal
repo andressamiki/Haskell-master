@@ -12,9 +12,6 @@ executable          library
                     Handler.Categorias
                     Handler.Usuario
                     Handler.Livro
-                    View.Duvidas
-                    View.Home
-                    View.Institucional
                     
   ghc-options:      -Wall -fwarn-tabs -O2
 

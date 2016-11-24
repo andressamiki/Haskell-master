@@ -1,0 +1,32 @@
+    <div class="container">
+            <header id="header" class="row">
+                <div class="col-md-4 col-xs-6">
+                    <a href=@{HomeR}><img src=@{StaticR img_logo_jpg} alt="Logo da biblioteca do saber" class="img-responsive">
+            
+        
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href=@{HomeR}>Home
+                
+                <li>
+                    <a href=@{InstR}>Institucional
+                
+                <li>
+                    <a href=@{DuvR}>Dúvidas Frequentes
+                
+                <li>
+                    <a href=@{ContR}>Fale conosco
+                
+            
+            <ul class="nav navbar-nav navbar-right">
+                $maybe _ <- sess
+                    <li>
+                        <form action=@{LogoutR} method=post>
+                            <input type="submit" value="Logout">
+                $nothing
+                    <li>
+                        <a href=@{LoginR}>Área Exclusiva
+    
