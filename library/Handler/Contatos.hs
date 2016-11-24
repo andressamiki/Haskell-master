@@ -1,5 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE QuasiQuotes       #-}
+{-# LANGUAGE TemplateHaskell   #-}
 module Handler.Contatos where
 
 import Foundation
@@ -32,81 +33,9 @@ getContR = do
     addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     
     addStylesheet $ StaticR css_principal_css
-    
-    [whamlet|
-    
-    <div class="container">
-        <header id="header" class="row">
-            <div class="col-md-4 col-xs-6">
-                <a href=@{HomeR}><img src=@{StaticR img_logo_jpg} alt="Logo da biblioteca do saber" class="img-responsive">
-        
-    
-         
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href=@{HomeR}>Home
-                
-                <li>
-                    <a href=@{InstR}>Institucional
-                
-                <li>
-                    <a href=@{DuvR}>Dúvidas Frequentes
-                
-                <li class="active">
-                    <a href=@{ContR}>Fale conosco
-                
-            
-            <ul class="nav navbar-nav navbar-right">
-                $maybe _ <- sess
-                    <li> 
-                        <form action=@{LogoutR} method=post>
-                            <input type="submit" value="Logout">
-                $nothing
-                    <li>
-                        <a href=@{LoginR}>Área Exclusiva
-                    
-    <main id="content">
-        <div class="container">
-            <header>
-                <h2 class="text-center">
-                    Fale conosco
-                
-            
-            <hr>
-            <br>
-            <div class="well">
-                <form method=post action=@{ContR} enctype=#{enctype}>
-                    ^{widget}
-                    <input type="submit" value="Enviar">
-                     
-                            
-    
-    <footer>
-        <section id="info" class="destaque">
-            <div class="container">
-                <div class="row">
-                    <br>
-                    <div class="col-md-5">
-                        <h6>
-                            Biblioteca do Saber
-                        
-                        <h6>
-                            Praça da Água, 2 - 13 3355-1000 | Lg. Maria de Lurdes, 24 - 13 3381-4890
-                        
-                        <h6>
-                            Segunda a Sexta das 10h às 17h30 com permanência até as 18h.
-                        
-                    
-                
-            
-            <br>
-        
-        <h6 class="text-center">
-            ©2015 Copyright Andressa - Todos os direitos reservados.
-        |]
-
+    $(whamletFile "templates/nav.hamlet")
+    $(whamletFile "templates/contato.hamlet")
+    $(whamletFile "templates/footer.hamlet")
 
 postContR :: Handler Html
 postContR = do
@@ -132,62 +61,10 @@ postContR = do
                 addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
                 
                 addStylesheet $ StaticR css_principal_css
+                $(whamletFile "templates/nav.hamlet")
+                $(whamletFile "templates/sucesCont.hamlet")
+                $(whamletFile "templates/footer.hamlet")        
                 
-                [whamlet|
-                
-                    <div class="container">
-                        <header id="header" class="row">
-                            <div class="col-md-4 col-xs-6">
-                                <a href=@{HomeR}><img src=@{StaticR img_logo_jpg} alt="Logo da biblioteca do saber" class="img-responsive">
-                        
-                    
-                
-                    <nav class="navbar navbar-inverse">
-                        <div class="container">
-                            <ul class="nav navbar-nav">
-                                <li>
-                                    <a href=@{HomeR}>Home
-                                
-                                <li>
-                                    <a href=@{InstR}>Institucional
-                                
-                                <li>
-                                    <a href=@{DuvR}>Dúvidas Frequentes
-                                
-                                <li>
-                                    <a href=@{ContR}>Fale conosco
-                                    
-                            <ul class="nav navbar-nav navbar-right">
-                                $maybe _ <- sess
-                                    <li> 
-                                        <form action=@{LogoutR} method=post>
-                                            <input type="submit" value="Logout">
-                                $nothing
-                                    <li> <a href=@{LoginR}>Área Exclusiva
-                                
-                    <main id="content" class="container">
-                        
-                        <h2>Obrigado #{contatosNome cont} pelo Contato em breve retornaremos!
-                                
-                    <footer>
-                        <section id="info" class="destaque">
-                            <div class="container">
-                                <div class="row">
-                                    <br>
-                                    <div class="col-md-5">
-                                        <h6>
-                                            Biblioteca do Saber
-                                        
-                                        <h6>
-                                            Praça da Água, 2 - 13 3355-1000 | Lg. Maria de Lurdes, 24 - 13 3381-4890
-                                        
-                                        <h6>
-                                            Segunda a Sexta das 10h às 17h30 com permanência até as 18h.
-                            <br>
-                        
-                        <h6 class="text-center">
-                            ©2015 Copyright Andressa - Todos os direitos reservados.
-                |]
         _ -> redirect ContR
         
         
@@ -211,82 +88,10 @@ getListContR = do
     addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     
     addStylesheet $ StaticR css_principal_css
+    $(whamletFile "templates/navAdmin.hamlet")
+    $(whamletFile "templates/listCont.hamlet")
+    $(whamletFile "templates/footer.hamlet")
     
-    [whamlet|
-    
-    <div class="container">
-        <header id="header" class="row">
-            <div class="col-md-4 col-xs-6">
-                <a href=@{HomeR}><img src=@{StaticR img_logo_jpg} alt="Logo da biblioteca do saber" class="img-responsive">
-        
-    
-         
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="adicionarlivro">Adicionar Livro
-                
-                <li>
-                    <a href="mostralivro">Livros cadastrados
-                    
-                <li>
-                    <a href=@{ListUserR}>Lista de Admin´s
-                
-                <li>
-                    <a href=@{ListContR}>SAC
-                
-            
-            <ul class="nav navbar-nav navbar-right">
-                $maybe _ <- sess
-                    <li> 
-                        <form action=@{LogoutR} method=post>
-                            <input type="submit" value="Logout">
-                $nothing
-                    -> redirect LoginR
-    <main id="content">
-        <div class="container">
-            <header>
-                <h2 class="text-center">
-                    Lista de Contatos
-              
-            <hr>
-            <br>
-            $forall Entity uid contato <- contatos
-                <form action=@{DelContR uid} method=post>
-                    <dl class='dl-horizontal well well-sm'>
-                        <dt>Nome:</dt><td> #{contatosNome  contato}
-                        <dt>Email:</dt><dd> #{contatosEmail  contato}
-                        <dt>Mensagem:</dt><dd> #{contatosMsg  contato}
-                        <br>
-                        <input type="submit" value="Apagar Contato" style="background-color:red; color:white;">
-                
-            
-                       
-    <footer>
-        <section id="info" class="destaque">
-            <div class="container">
-                <div class="row">
-                    <br>
-                    <div class="col-md-5">
-                        <h6>
-                            Biblioteca do Saber
-                        
-                        <h6>
-                            Praça da Água, 2 - 13 3355-1000 | Lg. Maria de Lurdes, 24 - 13 3381-4890
-                        
-                        <h6>
-                            Segunda a Sexta das 10h às 17h30 com permanência até as 18h.
-                        
-                    
-                
-            
-            <br>
-        
-        <h6 class="text-center">
-            ©2015 Copyright Andressa - Todos os direitos reservados.
-        |]
-        
         
 postDelContR :: ContatosId -> Handler Html
 postDelContR uid = do 

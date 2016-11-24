@@ -11,7 +11,6 @@ import Handler.Contatos
 import Handler.Livro
 import Handler.Categorias
 
-import Database.Persist.Postgresql
 ------------------
 mkYesodDispatch "App" resourcesApp
 

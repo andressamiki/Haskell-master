@@ -1,12 +1,11 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE TemplateHaskell      #-}
 {-# LANGUAGE QuasiQuotes       #-}
 module Handler.Usuario where
 
 import Foundation
 import Yesod
 import Data.Text
-import Control.Applicative
-import Database.Persist.Postgresql
 
 formUser :: Form Usuario
 formUser = renderDivs $ Usuario
@@ -33,81 +32,13 @@ getLoginR = do
         addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         
         addStylesheet $ StaticR css_principal_css
+        $(whamletFile "templates/nav.hamlet")
+        $(whamletFile "templates/login.hamlet")
+        $(whamletFile "templates/footer.hamlet")
         
-        [whamlet|
         
-        <div class="container">
-            <header id="header" class="row">
-                <div class="col-md-4 col-xs-6">
-                    <a href=@{HomeR}><img src=@{StaticR img_logo_jpg} alt="Logo da biblioteca do saber" class="img-responsive">
-            
         
-             
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href=@{HomeR}>Home
-                    
-                    <li>
-                        <a href=@{InstR}>Institucional
-                    
-                    <li>
-                        <a href=@{DuvR}>Dúvidas Frequentes
-                    
-                    <li class="active">
-                        <a href=@{ContR}>Fale conosco
-                    
-                
-                <ul class="nav navbar-nav navbar-right">
-                    $maybe _ <- sess
-                        <li> 
-                            <form action=@{LogoutR} method=post>
-                                <input type="submit" value="Logout">
-                    $nothing
-                        <li>
-                            <a href=@{LoginR}>Área Exclusiva
-                        
-        <main id="content">
-            <div class="container">
-                <header>
-                    <h2 class="text-center">Área administrativa
-                    
-                
-                <hr>
-                <br>
-                <div class="well">
-                    <form action=@{LoginR} method=post enctype=#{enctype}>
-                        ^{widget}
-                        <input type="submit" value="Logar">
-                         
-                                
         
-        <footer>
-            <section id="info" class="destaque">
-                <div class="container">
-                    <div class="row">
-                        <br>
-                        <div class="col-md-5">
-                            <h6>
-                                Biblioteca do Saber
-                            
-                            <h6>
-                                Praça da Água, 2 - 13 3355-1000 | Lg. Maria de Lurdes, 24 - 13 3381-4890
-                            
-                            <h6>
-                                Segunda a Sexta das 10h às 17h30 com permanência até as 18h.
-                            
-                        
-                    
-                
-                <br>
-            
-            <h6 class="text-center">
-                ©2015 Copyright Andressa - Todos os direitos reservados.
-            |]    
-    
--- ROTA DE AUTENTICACAO
 postLoginR :: Handler Html
 postLoginR = do
     ((resultado,_),_)<- runFormPost formUser
@@ -143,77 +74,12 @@ getListUserR = do
     addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     
     addStylesheet $ StaticR css_principal_css
-    
-    [whamlet|
-    
-    <div class="container">
-        <header id="header" class="row">
-            <div class="col-md-4 col-xs-6">
-                <a href=@{HomeR}><img src=@{StaticR img_logo_jpg} alt="Logo da biblioteca do saber" class="img-responsive">
-        
-    
-         
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="adicionarlivro">Adicionar Livro
-                
-                <li>
-                    <a href="mostralivro">Livros cadastrados
-                
-                <li>
-                    <a href=@{ListUserR}>Lista de Admin´s
-                <li>
-                    <a href=@{ListContR}>SAC
-            
-            <ul class="nav navbar-nav navbar-right">
-                $maybe _ <- sess
-                    <li> 
-                        <form action=@{LogoutR} method=post>
-                            <input type="submit" value="Logout">
-                $nothing
-                    -> redirect LoginR
-    <main id="content">
-        <div class="container">
-            <header>
-                <h2 class="text-center">
-                    Lista de Contatos
-              
-            <hr>
-            <br>
-            $forall Entity uid user <- usuario
-                <dl class='dl-horizontal well well-sm'>
-                <dt>Email:</dt><dd> #{usuarioEmail  user}
-                
-            
-                       
-    <footer>
-        <section id="info" class="destaque">
-            <div class="container">
-                <div class="row">
-                    <br>
-                    <div class="col-md-5">
-                        <h6>
-                            Biblioteca do Saber
-                        
-                        <h6>
-                            Praça da Água, 2 - 13 3355-1000 | Lg. Maria de Lurdes, 24 - 13 3381-4890
-                        
-                        <h6>
-                            Segunda a Sexta das 10h às 17h30 com permanência até as 18h.
-                        
-                    
-                
-            
-            <br>
-        
-        <h6 class="text-center">
-            ©2015 Copyright Andressa - Todos os direitos reservados.
-        |]
-
+    $(whamletFile "templates/navAdmin.hamlet")
+    $(whamletFile "templates/listUser.hamlet")
+    $(whamletFile "templates/footer.hamlet")
         
 postLogoutR :: Handler Html
 postLogoutR = do
     deleteSession "_ID"
     redirect HomeR
+    

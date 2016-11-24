@@ -1,0 +1,13 @@
+    <main id="content">
+        <div class="container">
+            <header>
+                <h2 class="text-center">
+                    Fale conosco
+                
+            
+            <hr>
+            <br>
+            <div class="well">
+                <form method=post action=@{ContR} enctype=#{enctype}>
+                    ^{widget}
+                    <input type="submit" value="Enviar">

@@ -1,0 +1,19 @@
+    <main id="content">
+        <div class="container">
+            <header>
+                <h2 class="text-center">
+                    Livros Cadastrados
+                  
+            <hr>
+            <br>
+            $forall Entity lid liv <- listaL
+                <form method=post action=@{LivroR lid}>
+                    
+                        <dl class='dl-horizontal well well-sm'>
+                            <a href=@{LivroR lid}>
+                                <dt>Nome:</dt><td>  #{livroNome liv}
+                            <br>
+                            <input type="submit" value="Apagar Contato" style="background-color:red; color:white;">
+                            
+                        
+                

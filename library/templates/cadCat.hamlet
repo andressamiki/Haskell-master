@@ -1,0 +1,16 @@
+    <main id="content">
+        <div class="container">
+            <header>
+                <h2 class="text-center">
+                    Cadastro de Categoria
+                
+            
+            <hr>
+            <br>
+            <div class="well">
+                <form method=post action=@{CatR} enctype=#{enctype}>
+                    ^{widget}
+                    <input type="submit" value="Cadastrar">
+                     
+                            
+    

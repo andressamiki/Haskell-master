@@ -1,0 +1,14 @@
+    <main id="content">
+            <div class="container">
+                <header>
+                    <h2 class="text-center">Área administrativa
+                    
+                
+                <hr>
+                <br>
+                <div class="well">
+                    <form action=@{LoginR} method=post enctype=#{enctype}>
+                        ^{widget}
+                        <input type="submit" value="Logar">
+                         
+        

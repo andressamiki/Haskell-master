@@ -1,0 +1,13 @@
+    <main id="content">
+        <div class="container">
+            <header>
+                <h2 class="text-center">
+                    Lista de Admin´s
+              
+            <hr>
+            <br>
+            $forall Entity uid user <- usuario
+                <dl class='dl-horizontal well well-sm'>
+                <dt>Email:</dt><dd> #{usuarioEmail  user}
+                
+    

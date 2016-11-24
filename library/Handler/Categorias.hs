@@ -5,10 +5,6 @@
 module Handler.Categorias where
 import Yesod
 import Foundation
-import Control.Monad.Logger (runStdoutLoggingT)
-import Control.Applicative
-import Data.Text
-import Database.Persist.Postgresql
 
 formCat:: Form Categorias
 formCat = renderDivs $ Categorias <$>
@@ -34,22 +30,34 @@ getCatR = do
     addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     
     addStylesheet $ StaticR css_principal_css
-    
-    [whamlet|
-            <h1>
-                Cadastro 
-            <form method=post action=@{CatR} enctype=#{enctype}>
-                ^{widget}
-                <input type="submit" value="Cadastrar">
-    |]
-
+    $(whamletFile "templates/navAdmin.hamlet")
+    $(whamletFile "templates/cadCat.hamlet")
+    $(whamletFile "templates/footer.hamlet")
+            
 postCatR :: Handler Html
 postCatR = do
                 ((result, _), _) <- runFormPost formCat
                 case result of
                     FormSuccess cat -> do
-                       runDB $ insert cat
-                       defaultLayout [whamlet|
-                           <h1> #{categoriasNome cat} Inserido com sucesso. 
-                       |]
+                        runDB $ insert cat
+                        defaultLayout $ do
+                            sess <- lookupSession "_ID"
+                            setTitle "Contatos Sucesso / Biblioteca do Saber"
+                            
+                            toWidgetHead[hamlet|
+                                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                            |]
+                            -- Adiciona o bootstrap via CDN
+                            addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                            
+                            -- Adiciona o jquery via CDN
+                            addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+                            -- Adiciona o js via CDN
+                            addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                            
+                            addStylesheet $ StaticR css_principal_css
+                            $(whamletFile "templates/navAdmin.hamlet")
+                            $(whamletFile "templates/sucesCat.hamlet")
+                            $(whamletFile "templates/footer.hamlet")
                     _ -> redirect CatR
