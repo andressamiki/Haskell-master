@@ -24,7 +24,7 @@ getContR = do
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     |]
-    -- Adiciona o bootstrap via CDN
+    -- Adiciona o bootstrapp via CDN
     addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     
     -- Adiciona o jquery via CDN
