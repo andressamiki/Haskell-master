@@ -97,6 +97,30 @@ getListLivR = do
                 $(whamletFile "templates/navAdmin.hamlet")
                 $(whamletFile "templates/listLivro.hamlet")
                 $(whamletFile "templates/footer.hamlet")
+
+getListLivUserR :: Handler Html
+getListLivUserR = do
+            listaL <- runDB $ selectList [] [Asc LivroNome]
+            
+            defaultLayout $ do
+                sess <- lookupSession "_ID"
+                setTitle "Acervo / Biblioteca do Saber"
+                
+                toWidgetHead[hamlet|
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                |]
+                -- Adiciona o bootstrap via CDN
+                addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                
+                -- Adiciona o jquery via CDN
+                addScriptRemote "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+                -- Adiciona o js via CDN
+                addScriptRemote "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                addStylesheet $ StaticR css_principal_css
+                $(whamletFile "templates/nav.hamlet")
+                $(whamletFile "templates/listLivroUser.hamlet")
+                $(whamletFile "templates/footer.hamlet")
                 
 
 getLivroR :: LivroId -> Handler Html
@@ -123,7 +147,7 @@ getLivroR lid = do
                 $(whamletFile "templates/perfilLivro.hamlet")
                 $(whamletFile "templates/footer.hamlet")
                 
-             
+
 
              
 postLivroR :: LivroId -> Handler Html

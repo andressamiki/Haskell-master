@@ -7,8 +7,9 @@
                 <hr>
                 <br>
                 <div class="well">
-                    <form action=@{LoginR} method=post enctype=#{enctype}>
+                    <form method=post action=@{LoginR} enctype=#{enctype}>
                         ^{widget}
                         <input type="submit" value="Logar">
+                    
                          
         

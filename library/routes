@@ -1,17 +1,18 @@
-/                                HomeR       GET
-/duvidas                         DuvR        GET
-/faleconosco                     ContR       GET POST
-/institucional                   InstR       GET
-/login                           LoginR      GET POST
-/static                          StaticR     Static getStatic
-/logout                          LogoutR     POST
-/contatos/listar                 ListContR   GET
-/usuario/listar                  ListUserR   GET
-/listar/categorias               ListCatR    GET
-/contatos/deletar/#ContatosId    DelContR    POST
-/usuario/adicionarlivro          LivR        GET POST
-/cadastrarUsuario                CadUserR    GET POST
-/adicionarcategoria              CatR        GET POST
-/livro/listar                    ListLivR    GET
-/livro/listar/#LivroId           LivroR      GET POST
-/categoria/listar/#CategoriasId  DelCatR     POST
+/                                HomeR         GET
+/duvidas                         DuvR          GET
+/faleconosco                     ContR         GET POST
+/institucional                   InstR         GET
+/login                           LoginR        GET POST
+/static                          StaticR       Static getStatic
+/logout                          LogoutR       POST
+/contatos/listar                 ListContR     GET
+/usuario/listar                  ListUserR     GET
+/listar/categorias               ListCatR      GET
+/contatos/deletar/#ContatosId    DelContR      POST
+/usuario/adicionarlivro          LivR          GET POST
+/cadastrarUsuario                CadUserR      GET POST
+/adicionarcategoria              CatR          GET POST
+/livro/listar                    ListLivR      GET
+/livro/listar/#LivroId           LivroR        GET POST
+/categoria/listar/#CategoriasId  DelCatR       POST
+/acervo                          ListLivUserR  GET

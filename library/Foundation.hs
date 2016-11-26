@@ -48,7 +48,8 @@ instance Yesod App where
     isAuthorized HomeR _ = return Authorized
     isAuthorized InstR _ = return Authorized
     isAuthorized DuvR _ = return Authorized
-    isAuthorized ContR _ = return Authorized
+    isAuthorized ContR _ = return Authorized 
+    isAuthorized ListLivUserR _ = return Authorized
     
     isAuthorized _ _ = estaAutenticado
 
@@ -68,3 +69,4 @@ instance YesodPersist App where
 
 instance RenderMessage App FormMessage where
     renderMessage _ _ = defaultFormMessage
+    

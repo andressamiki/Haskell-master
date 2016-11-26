@@ -7,12 +7,13 @@
             <hr>
             <br>
             $forall Entity cid cat <- listaL
-                <form method=post action=@{DelCatR cid}>
-                    
-                        <dl class='dl-horizontal well well-sm'>
-                            <dt>Nome:</dt><td>  #{categoriasNome cat}
-                            <br>
-                            <input type="submit" value="Apagar Categoria" style="background-color:red; color:white;">
-                            
+                <div class="well">
+                    <form method=post action=@{DelCatR cid}>
+                        
+                            <dl class='dl-horizontal well well-sm'>
+                                <dt>Nome:</dt><td>  #{categoriasNome cat}
+                                <br>
+                                <input type="submit" value="Apagar Categoria" style="background-color:red; color:white;">
+                                
                         
                 

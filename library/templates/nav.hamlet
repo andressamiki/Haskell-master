@@ -13,6 +13,9 @@
                 
                 <li>
                     <a href=@{InstR}>Institucional
+                    
+                <li>
+                    <a href=@{ListLivUserR}>Acervo
                 
                 <li>
                     <a href=@{DuvR}>Dúvidas Frequentes

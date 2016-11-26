@@ -7,7 +7,8 @@
             <hr>
             <br>
             $forall Entity uid user <- usuario
-                <dl class='dl-horizontal well well-sm'>
-                <dt>Email:</dt><dd> #{usuarioEmail  user}
+                <div class="well">
+                    <dl class='dl-horizontal well well-sm'>
+                    <dt>Email:</dt><dd> #{usuarioEmail  user}
                 
     

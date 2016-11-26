@@ -7,14 +7,15 @@
             <hr>
             <br>
             $forall Entity lid liv <- listaL
-                <form method=post action=@{LivroR lid}>
-                    
-                        <dl class='dl-horizontal well well-sm'>
-                            <dt>Nome:</dt><td>
-                                <a href=@{LivroR lid}>
-                                    #{livroNome liv}
-                            <br>
-                            <input type="submit" value="Apagar Contato" style="background-color:red; color:white;">
-                            
+                <div class="well">
+                    <form method=post action=@{LivroR lid}>
+                        
+                            <dl class='dl-horizontal well well-sm'>
+                                <dt>Nome:</dt><td>
+                                    <a href=@{LivroR lid}>
+                                        #{livroNome liv}
+                                <br>
+                                <input type="submit" value="Apagar Contato" style="background-color:red; color:white;">
+                                
                         
                 

@@ -1,0 +1,21 @@
+    <main id="content">
+        <div class="container">
+            <header>
+                <h2 class="text-center">
+                    Acervo
+                  
+            <hr>
+            <br>
+            $forall Entity lid liv <- listaL
+                <div class="well">
+                    <h5>
+                        Livro: #{livroNome liv}
+                    <p>
+                        Autor: #{livroAutor liv}
+                    <p> 
+                        Assunto: #{livroAssunto liv}
+                    
+                            
+                            
+                        
+                

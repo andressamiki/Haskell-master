@@ -6,12 +6,12 @@ module Handler.Contatos where
 import Foundation
 import Yesod
 
-
+ 
 formCont :: Form Contatos
 formCont = renderDivs $ Contatos
     <$> areq textField  "Nome: "     Nothing
     <*> areq textField  "Email: "    Nothing
-    <*> areq textField   "Mensagem: " Nothing
+    <*> areq textField  "Mensagem: " Nothing
 
 getContR:: Handler Html
 getContR = do

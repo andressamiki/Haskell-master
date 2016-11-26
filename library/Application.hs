@@ -82,5 +82,6 @@ getDuvR = defaultLayout $ do
     addStylesheet $ StaticR css_principal_css
     
     $(whamletFile "templates/nav.hamlet")
+    $(whamletFile "templates/duvidas.hamlet")
     $(whamletFile "templates/footer.hamlet")
         
