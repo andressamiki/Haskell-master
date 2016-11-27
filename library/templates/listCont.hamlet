@@ -2,15 +2,15 @@
         <div class="container">
             <header>
                 <h2 class="text-center">
-                    Lista de Contatos
+                     _{MsgAdminListarContatos2}
               
             <hr>
             <br>
             $forall Entity uid contato <- contatos
                 <form action=@{DelContR uid} method=post>
                     <dl class='dl-horizontal well well-sm'>
-                        <dt>Nome:</dt><td> #{contatosNome  contato}
+                        <dt>_{MsgListarContatoNome}:</dt><td> #{contatosNome  contato}
                         <dt>Email:</dt><dd> #{contatosEmail  contato}
-                        <dt>Mensagem:</dt><dd> #{contatosMsg  contato}
+                        <dt>_{MsgListarContatoMensagem}:</dt><dd> #{contatosMsg  contato}
                         <br>
-                        <input type="submit" value="Apagar Contato" style="background-color:red; color:white;">
+                        <input type="submit" value="_{MsgDeletarContato}" style="background-color:red; color:white;">

@@ -5,12 +5,12 @@
                 <br>
                 <div class="well">
                     <h3>
-                        Livro: #{livroNome livro}
+                        _{MsgPerfilListarLivroNome}: #{livroNome livro}
                     <p>
-                        Autor: #{livroAutor livro}
+                        _{MsgPerfilListarLivroAutor}: #{livroAutor livro}
                     <p> 
-                        Assunto: #{livroAssunto livro}
+                        _{MsgPerfilListarLivroAssunto}: #{livroAssunto livro}
                     <p> 
-                        Categoria: #{categoriasNome cat}
+                        _{MsgPerfilListarLivroCategoria}: #{categoriasNome cat}
                          
         

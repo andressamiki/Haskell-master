@@ -33,7 +33,7 @@
                 $maybe _ <- sess
                     <li> 
                         <form action=@{LogoutR} method=post>
-                            <Button type="submit" class="btn btn-default"> Logout </button>
+                            <Button type="submit" class="btn btn-default" style="margin-top:8px"> _{MsgSair}</button>
                 $nothing
                     -> redirect LoginR
     

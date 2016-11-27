@@ -2,7 +2,7 @@
         <div class="container">
             <header>
                 <h2 class="text-center">
-                    Livros Cadastrados
+                   _{MsgAdminListarLivro2}
                   
             <hr>
             <br>
@@ -11,11 +11,11 @@
                     <form method=post action=@{LivroR lid}>
                         
                             <dl class='dl-horizontal well well-sm'>
-                                <dt>Nome:</dt><td>
+                                <dt>_{MsgCadastroLivroNome2}:</dt><td>
                                     <a href=@{LivroR lid}>
                                         #{livroNome liv}
                                 <br>
-                                <input type="submit" value="Apagar Contato" style="background-color:red; color:white;">
+                                <input type="submit" value="_{MsgDeletarLivro}" style="background-color:red; color:white;">
                                 
                         
                 

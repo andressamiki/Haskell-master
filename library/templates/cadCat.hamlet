@@ -2,7 +2,7 @@
         <div class="container">
             <header>
                 <h2 class="text-center">
-                    Cadastro de Categoria
+                     _{MsgAdminAdicionarCategoria2}
                 
             
             <hr>
@@ -10,7 +10,7 @@
             <div class="well">
                 <form method=post action=@{CatR} enctype=#{enctype}>
                     ^{widget}
-                    <input type="submit" value="Cadastrar">
+                    <input type="submit" class="btn btn-default" value="_{MsgLogar5}">
                      
                             
     

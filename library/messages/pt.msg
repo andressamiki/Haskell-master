@@ -10,6 +10,9 @@ Contato2: Contato
 Logar: Area exclusiva
 Logar2: Area exclusiva
 Logar3: Entrar
+Logar4: Cadastrar
+Logar5: Cadastrar
+Logar6: Cadastrar
 Servicos: Nossos Serviços
 Modulo1: Nosso acervo
 Modulo2: Reserva de obras
@@ -46,3 +49,20 @@ CadastroLivroNome: Nome
 CadastroLivroCategoria: Categoria
 CadastroLivroAutor: Autor
 CadastroLivroAssunto: Assunto
+CadastroCategoriaNome: Nome
+CadastroCategoriaNome2: Name
+DeletarCategoria: Deletar
+DeletarLivro: Deletar
+CadastroLivroNome2: Nome
+ListarContatoNome: Nome
+ListarContatoMensagem: Mensagem
+DeletarContato: Deletar
+Sair: Sair
+PerfilListarLivroNome: Nome
+PerfilListarLivroCategoria: Categoria
+PerfilListarLivroAutor: Autor
+PerfilListarLivroAssunto: Categoria
+SucessoCategoria: cadastrado com sucesso
+SucessoLivro: cadastrado com sucesso
+SucessoUser:cadastrado com sucesso
+SucessoContato: obrigado por entrar em contato conosco

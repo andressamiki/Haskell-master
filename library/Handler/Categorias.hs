@@ -8,7 +8,7 @@ import Foundation
 
 formCat:: Form Categorias
 formCat = renderDivs $ Categorias <$>
-            areq textField "Nome" Nothing
+            areq textField (fieldSettingsLabel MsgCadastroCategoriaNome) Nothing
 
 getCatR :: Handler Html
 getCatR = do

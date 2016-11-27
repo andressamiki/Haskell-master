@@ -10,6 +10,9 @@ Contato2: Contact
 Logar: Login
 Logar2: Login
 Logar3: Send
+Logar4: Register
+Logar5: Register
+Logar6: Register
 Servicos: Our services
 Modulo1: Our collection
 Modulo2: Reserve books
@@ -46,3 +49,20 @@ CadastroLivroNome: Name
 CadastroLivroCategoria: Category
 CadastroLivroAutor: Author
 CadastroLivroAssunto: Subject
+CadastroCategoriaNome: Name
+CadastroCategoriaNome2: Name
+DeletarCategoria: Delete
+DeletarLivro: Delete
+CadastroLivroNome2: Name
+ListarContatoNome: Name
+ListarContatoMensagem: Message
+DeletarContato: Delete
+Sair: Logout
+PerfilListarLivroNome: Name
+PerfilListarLivroCategoria: Category
+PerfilListarLivroAutor: Author
+PerfilListarLivroAssunto: Subject
+SucessoCategoria: successful registered
+SucessoLivro: successful registered
+SucessoUser: successful registered
+SucessoContato: Thank you for contact us
