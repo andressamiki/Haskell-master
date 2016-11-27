@@ -40,34 +40,31 @@
             <br>
             <header>
                 <h3 class="text-center">
-                    Serviços oferecidos para os usuários
+                     _{MsgServicos}
                 
             <div class="row">
                 <div class="col-md-4 col-xs-6">
                     <hr>
                     <h4>
-                        Consulta no acervo
+                         _{MsgModulo1}
                     
                     <p>
-                        Os usuário cadastrados podem pesquisar pela base de dados da biblioteca
-                        o livro que deseja.
+                         _{MsgModulo1msg}
                     
                 
                 <div class="col-md-4 col-xs-6">
                     <hr>
                     <h4>
-                        Reserva de obras
+                         _{MsgModulo2}
                     
                     <p>
-                        Todas as obras poderão ser reservadas pessoalmente por alunos e professores
-                        da nossa instituição.
+                         _{MsgModulo2msg}
                     
                 
                 <div class="col-md-4 col-xs-6">
                     <hr>
                     <h4>
-                        Central de informações
+                         _{MsgModulo3}
                     
                     <p>
-                        A biblioteca do saber oferece uma central de informação em sua biblioteca
-                        fisica.
+                         _{MsgModulo3msg}

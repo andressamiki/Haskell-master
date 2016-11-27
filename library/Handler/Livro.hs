@@ -9,10 +9,10 @@ import Yesod
 
 formLivro :: Form Livro
 formLivro = renderDivs $ Livro
-    <$> areq textField  "Nome: "       Nothing
-    <*> areq textField  "Autor: "      Nothing
-    <*> areq textField  "Assunto: "    Nothing
-    <*> areq (selectField cats)  "Categoria: "  Nothing
+    <$> areq textField  (fieldSettingsLabel MsgCadastroLivroNome)       Nothing
+    <*> areq textField  (fieldSettingsLabel MsgCadastroLivroAutor)      Nothing
+    <*> areq textField  (fieldSettingsLabel MsgCadastroLivroAssunto)    Nothing
+    <*> areq (selectField cats)  (fieldSettingsLabel MsgCadastroLivroCategoria)  Nothing
     
 cats = do
        entidades <- runDB $ selectList [] [Asc CategoriasNome] 

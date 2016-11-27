@@ -9,8 +9,8 @@ import Data.Text
 
 formUser :: Form Usuario
 formUser = renderDivs $ Usuario
-    <$> areq emailField    "E-mail"  Nothing
-    <*> areq passwordField "Senha"   Nothing
+    <$> areq emailField    (fieldSettingsLabel MsgLoginEmail)  Nothing
+    <*> areq passwordField (fieldSettingsLabel MsgLoginSenha)   Nothing
 
 getLoginR :: Handler Html
 getLoginR = do

@@ -8,7 +8,7 @@ import Yesod
 import Data.Text
 import Yesod.Static
 import Database.Persist.Postgresql
-    ( ConnectionPool, SqlBackend, runSqlPool, runMigration)
+    ( ConnectionPool, SqlBackend, runSqlPool)
     
 staticFiles "static"
 
@@ -39,6 +39,7 @@ Categorias
 
 mkYesodData "App" $(parseRoutesFile "routes")
 
+mkMessage "App" "messages" "pt"
 type Form a = Html -> MForm Handler (FormResult a, Widget)
 
 instance Yesod App where

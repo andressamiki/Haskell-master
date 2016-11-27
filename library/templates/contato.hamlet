@@ -2,7 +2,7 @@
         <div class="container">
             <header>
                 <h2 class="text-center">
-                    Fale conosco
+                     _{MsgContato2}
                 
             
             <hr>
@@ -10,4 +10,4 @@
             <div class="well">
                 <form method=post action=@{ContR} enctype=#{enctype}>
                     ^{widget}
-                    <input type="submit" value="Enviar">
+                    <input type="submit" value=" _{MsgContatoButton}">

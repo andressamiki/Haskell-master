@@ -9,19 +9,19 @@
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href=@{HomeR}>Home
+                    <a href=@{HomeR}> _{MsgInicio}
                 
                 <li>
-                    <a href=@{InstR}>Institucional
+                    <a href=@{InstR}> _{MsgSobre}
                     
                 <li>
-                    <a href=@{ListLivUserR}>Acervo
+                    <a href=@{ListLivUserR}> _{MsgAcervo}
                 
                 <li>
-                    <a href=@{DuvR}>Dúvidas Frequentes
+                    <a href=@{DuvR}> _{MsgDuvida}
                 
                 <li>
-                    <a href=@{ContR}>Fale conosco
+                    <a href=@{ContR}> _{MsgContato}
                 
             
             <ul class="nav navbar-nav navbar-right">
@@ -31,5 +31,5 @@
                             <input type="submit" value="Logout">
                 $nothing
                     <li>
-                        <a href=@{LoginR}>Área Exclusiva
+                        <a href=@{LoginR}> _{MsgLogar}
     

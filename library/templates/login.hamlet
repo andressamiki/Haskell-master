@@ -1,15 +1,15 @@
     <main id="content">
             <div class="container">
                 <header>
-                    <h2 class="text-center">Área administrativa
-                    
+                    <h2 class="text-center">
+                         _{MsgLogar2}
                 
                 <hr>
                 <br>
                 <div class="well">
                     <form method=post action=@{LoginR} enctype=#{enctype}>
                         ^{widget}
-                        <input type="submit" value="Logar">
+                        <input type="submit" value=" _{MsgLogar3}">
                     
                          
         

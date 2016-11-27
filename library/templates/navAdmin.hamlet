@@ -9,31 +9,31 @@
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href=@{LivR}>Adicionar Livro
+                    <a href=@{LivR}> _{MsgAdminAdicionarLivro}
                     
                 <li>
-                    <a href=@{CatR}>Adicionar Categoria
+                    <a href=@{CatR}> _{MsgAdminAdicionarCategoria}
                     
                 <li>
-                    <a href=@{ListCatR}>Listar Categorias
+                    <a href=@{ListCatR}> _{MsgAdminListarCategoria}
                 
                 <li>
-                    <a href=@{ListLivR}>Livros cadastrados
+                    <a href=@{ListLivR}>_{MsgAdminListarLivro}
                 
                 <li>
-                    <a href=@{CadUserR}>Cadastrar Admin
+                    <a href=@{CadUserR}> _{MsgAdminAdicionarAdmin}
                 
                 <li>
-                    <a href=@{ListUserR}>Lista de Admin´s
+                    <a href=@{ListUserR}> _{MsgAdminListarAdmin}
                 
                 <li>
-                    <a href=@{ListContR}>Lista de Contatos
+                    <a href=@{ListContR}> _{MsgAdminListarContatos}
             
             <ul class="nav navbar-nav navbar-right">
                 $maybe _ <- sess
                     <li> 
                         <form action=@{LogoutR} method=post>
-                            <input type="submit" value="Logout">
+                            <Button type="submit" class="btn btn-default"> Logout </button>
                 $nothing
                     -> redirect LoginR
     
