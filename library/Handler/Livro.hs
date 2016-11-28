@@ -50,7 +50,7 @@ postLivR = do
     ((resultado,_),_)<- runFormPost formLivro
     case resultado of
         FormSuccess liv -> do
-            lid <- runDB $ insert liv
+            runDB $ insert liv
             defaultLayout $ do
                 
                 sess <- lookupSession "_ID"

@@ -70,3 +70,9 @@ Slide1: Brasil é arte
 Slide2: Conheça mais sobre a literatura brasileira
 Slide3: Cuidado com o vencimento
 Slide4: Não esqueça das datas de devolver o livro e atualizar sua conta
+Pergunta1: Quem pode alugar o livro?
+Pergunta2:Serei avisado do vencimento do prazo de empréstimo?
+Pergunta3:Quem pode visualizar os livros disponiveis na biblioteca?
+Resposta1:Todos aqueles que tenham feito o cadastro pessoalmente na biblioteca e tenham comprido o prazo de vencimento dos materiais.
+Resposta2:Sim. O sistema envia automaticamente aos usuários com e-mail cadastrado, um aviso de vencimento com 2 dias de antecedência do prazo de empréstimo.Porém, o eventual não recebimento do e-mail por problemas técnicos, não isenta o usuário do compromisso de cumprir os prazos. Portanto, verifique sempre os prazos de vencimento dos livros em seu poder.
+Resposta3:Todos podem visualizar os livro presentes no nosso acervo, porem apenas pessoas que possuem cadastro podem fazer o emprestimo.

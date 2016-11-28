@@ -70,3 +70,9 @@ Slide1: Brazil is art
 Slide2: Know more about Brazilian literature
 Slide3: Beware of expiration
 Slide4: Do not forget the dates of returning the book and updating your account
+Pergunta1:Who can rent the book?
+Pergunta2:Will I be advised of the maturity of the loan?
+Pergunta3:Who can view the books available in the library?
+Resposta1:All those who have personally registered in the library and have extended the maturity of the materials.
+Resposta2:Yes. The system automatically sends to users with registered email, a notice of maturity 2 days in advance of the loan term. However, any failure to receive the email due to technical problems does not exempt the user from the commitment to comply The deadlines. Therefore, always check the due dates of the books in your possession.
+Resposta3:Everyone can view the books present in our collection, but only people who have a registration can make the loan.
