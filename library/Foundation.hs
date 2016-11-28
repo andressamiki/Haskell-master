@@ -52,6 +52,7 @@ instance Yesod App where
     isAuthorized DuvR _ = return Authorized
     isAuthorized ContR _ = return Authorized 
     isAuthorized ListLivUserR _ = return Authorized
+    isAuthorized (LivroUserR _) _ = return Authorized
     
     isAuthorized _ _ = estaAutenticado
 

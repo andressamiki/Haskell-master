@@ -9,10 +9,10 @@
                     <img src=@{StaticR img_imagem5_jpg} alt="" class="img-responsive"/>
                     <div class="carousel-caption">
                         <h2>
-                            Brasil é arte
+                            _{MsgSlide1}
                         
                         <h4>
-                            Conheça mais sobre a literatura brasileira
+                            _{MsgSlide2}
                         
                         <br>
                     
@@ -20,10 +20,10 @@
                     <img src=@{StaticR img_imagem4_jpg} alt="" class="img-responsive"/>
                     <div class="carousel-caption">
                         <h2>
-                            Cuidado com o vencimento
+                            _{MsgSlide3}
                         
                         <h4>
-                            Não esqueça das datas de devolver o livro e atualizar sua conta
+                            _{MsgSlide4}
                         
                         <br>
                     
@@ -45,6 +45,7 @@
             <div class="row">
                 <div class="col-md-4 col-xs-6">
                     <hr>
+                    <img src=@{StaticR img_livro2_jpg} alt="" class="img-responsive"/>
                     <h4>
                          _{MsgModulo1}
                     
@@ -54,6 +55,7 @@
                 
                 <div class="col-md-4 col-xs-6">
                     <hr>
+                    <img src=@{StaticR img_livro1_png} alt="" class="img-responsive"/>
                     <h4>
                          _{MsgModulo2}
                     
@@ -63,6 +65,7 @@
                 
                 <div class="col-md-4 col-xs-6">
                     <hr>
+                    <img src=@{StaticR img_livro3_jpg} alt="" class="img-responsive"/>
                     <h4>
                          _{MsgModulo3}
                     

@@ -8,12 +8,11 @@
             <br>
             $forall Entity lid liv <- listaL
                 <div class="well">
-                    <h5>
-                        Livro: #{livroNome liv}
-                    <p>
-                        Autor: #{livroAutor liv}
-                    <p> 
-                        Assunto: #{livroAssunto liv}
+                    <div class='dl-horizontal well well-sm'>
+                        <a href=@{LivroUserR lid}>#{livroNome liv}
+                            
+                                
+                    
                     
                             
                             

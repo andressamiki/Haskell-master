@@ -7,8 +7,8 @@ Duvida:Dúvidas
 Duvida2:Dúvidas
 Contato: Contato
 Contato2: Contato
-Logar: Area exclusiva
-Logar2: Area exclusiva
+Logar: Área Exclusiva
+Logar2: Área Exclusiva
 Logar3: Entrar
 Logar4: Cadastrar
 Logar5: Cadastrar
@@ -45,24 +45,28 @@ AdminListarAdmin2: Listar usúario
 AdminListarLivro2: Listar livro
 AdminListarCategoria2: Listar categoria
 AdminListarContatos2: Listar contatos
-CadastroLivroNome: Nome
+CadastroLivroNome: Titulo
 CadastroLivroCategoria: Categoria
 CadastroLivroAutor: Autor
 CadastroLivroAssunto: Assunto
-CadastroCategoriaNome: Nome
-CadastroCategoriaNome2: Name
+CadastroCategoriaNome: Categoria
+CadastroCategoriaNome2: Categoria
 DeletarCategoria: Deletar
 DeletarLivro: Deletar
-CadastroLivroNome2: Nome
+CadastroLivroNome2: Titulo
 ListarContatoNome: Nome
 ListarContatoMensagem: Mensagem
 DeletarContato: Deletar
 Sair: Sair
-PerfilListarLivroNome: Nome
+PerfilListarLivroNome:Titulo
 PerfilListarLivroCategoria: Categoria
 PerfilListarLivroAutor: Autor
-PerfilListarLivroAssunto: Categoria
+PerfilListarLivroAssunto: Assunto
 SucessoCategoria: cadastrado com sucesso
 SucessoLivro: cadastrado com sucesso
 SucessoUser:cadastrado com sucesso
 SucessoContato: obrigado por entrar em contato conosco
+Slide1: Brasil é arte
+Slide2: Conheça mais sobre a literatura brasileira
+Slide3: Cuidado com o vencimento
+Slide4: Não esqueça das datas de devolver o livro e atualizar sua conta

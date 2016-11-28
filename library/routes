@@ -16,3 +16,4 @@
 /livro/listar/#LivroId           LivroR        GET POST
 /categoria/listar/#CategoriasId  DelCatR       POST
 /acervo                          ListLivUserR  GET
+/acervo/#LivroId                 LivroUserR    GET

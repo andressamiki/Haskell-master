@@ -45,20 +45,20 @@ AdminListarAdmin2: User list
 AdminListarLivro2: Book list
 AdminListarCategoria2: Category list
 AdminListarContatos2: Contact list
-CadastroLivroNome: Name
+CadastroLivroNome: Title
 CadastroLivroCategoria: Category
 CadastroLivroAutor: Author
 CadastroLivroAssunto: Subject
-CadastroCategoriaNome: Name
-CadastroCategoriaNome2: Name
+CadastroCategoriaNome: Category
+CadastroCategoriaNome2: Category
 DeletarCategoria: Delete
 DeletarLivro: Delete
-CadastroLivroNome2: Name
+CadastroLivroNome2: Title
 ListarContatoNome: Name
 ListarContatoMensagem: Message
 DeletarContato: Delete
 Sair: Logout
-PerfilListarLivroNome: Name
+PerfilListarLivroNome: Title
 PerfilListarLivroCategoria: Category
 PerfilListarLivroAutor: Author
 PerfilListarLivroAssunto: Subject
@@ -66,3 +66,7 @@ SucessoCategoria: successful registered
 SucessoLivro: successful registered
 SucessoUser: successful registered
 SucessoContato: Thank you for contact us
+Slide1: Brazil is art
+Slide2: Know more about Brazilian literature
+Slide3: Beware of expiration
+Slide4: Do not forget the dates of returning the book and updating your account
