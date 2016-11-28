@@ -20,7 +20,7 @@ Modulo3:Information center
 Modulo1msg: Registered users can search for books in our database. 
 Modulo2msg: Every book can be reserved personally for students and professor of our institution. 
 Modulo3msg: There is an information center in Knowledge Library
-Rodape: Praça da Água, 2 - Fone: 13 3355-1000 | Lg. Maria de Lurdes, 24 - Fone: 13 3381-4890 - Monday to Frinday das 10 a.m às 17h30 p.m to entrance to 18 p.m to exit.
+Rodape: Praça da Água, 2 - Fone: 13 3355-1000 | Lg. Maria de Lurdes, 24 - Fone: 13 3381-4890 - Monday to Frinday from 10 a.m to 17h30 p.m to entrance to 18 p.m to exit.
 Sobretitulo1: Presentation
 Sobretexto:The 'biblioteca do saber' has a collection of books, newspaper, multimedia materials and photografies. It received people and it books daily, offering special treatment to children and visually impaired costumers, besides provide the population with access to reading.Conscious of its important role in disseminate information, the 'biblioteca do saber' is also a Research center to all segments of society which need information input to their development. Therefore, its collection is open for everyone to consult it bodily.
 Sobretitulo2:Aims of general policy

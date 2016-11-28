@@ -30,7 +30,7 @@ Livro
 Contatos
     nome  Text
     email Text
-    msg   Text
+    msg   Textarea
     deriving Show
     
 Categorias

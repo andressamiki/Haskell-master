@@ -5,12 +5,12 @@ module Handler.Contatos where
 
 import Foundation
 import Yesod
- 
+
 formCont :: Form Contatos
 formCont = renderDivs $ Contatos
     <$> areq textField  (fieldSettingsLabel MsgContatoNome) Nothing
     <*> areq emailField (fieldSettingsLabel MsgContatoEmail)    Nothing
-    <*> areq textField  (fieldSettingsLabel MsgContatoMensagem) Nothing
+    <*> areq textareaField  (fieldSettingsLabel MsgContatoMensagem) Nothing
 
 getContR:: Handler Html
 getContR = do

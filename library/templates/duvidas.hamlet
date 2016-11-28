@@ -3,7 +3,17 @@
             <header>
                 <h2 class="text-center">
                      _{MsgDuvida2}
-                
-            
             <hr>
-            
+            <dl>
+                <dt>Quem pode alugar o livro?
+                <br>
+                <dd>Todos aqueles que tenham feito o cadastro pessoalmente na biblioteca e tenham comprido o prazo de vencimento dos materiais.
+                <br><br>
+                <dt>Serei avisado do vencimento do prazo de empréstimo? 
+                <br>
+                <dd>Sim. O sistema envia automaticamente aos usuários com e-mail cadastrado, um aviso de vencimento com 2 dias de antecedência do prazo de empréstimo.Porém, o eventual não recebimento do e-mail por problemas técnicos, não isenta o usuário do compromisso de cumprir os prazos. Portanto, verifique sempre os prazos de vencimento dos livros em seu poder.
+                <br><br>
+                <dt>Quem pode visualizar os livros disponiveis na biblioteca?
+                <br>
+                <dd>Todos podem visualizar os livro presentes no nosso acervo, porem apenas pessoas que possuem cadastro podem fazer o emprestimo.
+                <br>
