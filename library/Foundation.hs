@@ -18,6 +18,7 @@ share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
 Usuario
     email Text
     senha Text
+    UniqueEmail email
     
 Livro
     nome      Text
